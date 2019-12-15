@@ -8,4 +8,5 @@ MAINTAINER GoAbout <tech@goabout.com>
 
 ENV PATH /usr/share/kibana/bin:$PATH
 
-RUN kibana-plugin install ${LOGTRAIL_DOWNLOAD_BASE}/logtrail-${KIBANA_VERSION}-${LOGTRAIL_VERSION}.zip
+RUN kibana-plugin install ${LOGTRAIL_DOWNLOAD_BASE}/logtrail-${KIBANA_VERSION}-${LOGTRAIL_VERSION}.zip && \
+    kibana --optimize
